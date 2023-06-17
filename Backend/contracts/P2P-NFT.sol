@@ -53,7 +53,7 @@ contract NFTLoanContract {
         Loan storage loan = loans[_loanId];
         require(loan.active, "Loan is not active");
 
-        IERC20 stablecoin = IERC20(address(0x123...)); // Address of stablecoin contract
+        IERC20 stablecoin = IERC20(address(0)); // Address of stablecoin contract
 
         uint256 interestAmount = (loan.loanAmount * loan.interestRate) / 10000;
         uint256 totalAmount = loan.loanAmount + interestAmount;
